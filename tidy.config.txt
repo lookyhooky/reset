@@ -1,0 +1,9 @@
+// sample config file for HTML tidy
+indent: yes
+indent-spaces: 4
+// wrap: 72
+show-warnings: yes
+break-before-br: no
+uppercase-tags: no
+uppercase-attributes: no
+char-encoding: utf8

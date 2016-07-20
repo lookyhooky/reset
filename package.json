@@ -1,0 +1,20 @@
+{
+  "name": "reset",
+  "version": "1.0.0",
+  "description": "Reset Hooks Crane Website.",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "postcss -c postcss.config.js"
+  },
+  "author": "John Hooks",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.14.0",
+    "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {
+    "mustache": "^2.2.1",
+    "webpack": "^1.13.1"
+  }
+}
