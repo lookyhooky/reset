@@ -1,0 +1,28 @@
+@import 'normalize.css';
+
+/* @import 'basscss-btn'; */
+/* @import 'basscss-btn-primary'; */
+@import 'basscss-colors';
+@import 'basscss-background-colors';
+@import 'basscss';
+
+@import 'btn';
+@import 'forms';
+@import 'table';
+@import 'spacing';
+
+body {
+    font-family: var(--font-family);
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --font-family: 'Open Sans', sans-serif;
+    --button-color: white;
+    --button-background-color: rgb(4, 174, 89); /* Green */
+}

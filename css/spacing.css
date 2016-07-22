@@ -1,0 +1,27 @@
+/* spacing.css */
+
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+    margin-bottom: 2.5rem; }
+
+/* :root { */
+/*     --space-1: .5rem; */
+/*     --space-2: 1rem; */
+/*     --space-3: 2rem; */
+/*     --space-4: 4rem; */
+/* } */

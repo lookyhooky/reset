@@ -1,4 +1,6 @@
 {
-  "title": "Hooks Crane Service - Richland, WA",
+  "id": "index",
+  "nav": "Home",
+  "route": "/",
   "description": "Mobile Operated Crane Rental in Pasco, Kennewick, Richland and Southeastern Washington"
 }

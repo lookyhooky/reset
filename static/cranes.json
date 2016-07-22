@@ -1,6 +1,9 @@
 {
-  "title": "Cranes - Hooks Crane Service - Richland, WA",
-  "description": "Crane Details",
+  "id": "cranes",
+  "route": "/cranes.html",
+  "nav": "Cranes",
+  "title": "Cranes",
+  "description": "Hooks Crane Service Equipment Details",
   "cranes": [
     {
       "title": "Grove TMS375LP",

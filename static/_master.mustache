@@ -7,8 +7,16 @@
         <meta name="author" content="John Hooks">
         <meta name="google-site-verification" content="z9C4ax8RVA32m2HLESQKTdwvpcId5qRS1b6LWUjrfTo" />
 
-        <title>{{title}}</title>
-
+        <title>
+            {{#title}}
+                {{title}} - Hooks Crane Service - Richland, WA
+            {{/title}}
+            {{^title}}
+                Hooks Crane Service - Richland, WA
+            {{/title}}
+        </title>
+        
+        {{!
         <script>
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,40 +26,56 @@
          ga('create', 'UA-56085589-1', 'auto');
          ga('send', 'pageview');
         </script>
+        }}
         
-        <!-- Vendor CSS -->
-        <link rel="stylesheet" href="normalize.css">
+        {{! Vender CSS }}
+        <!-- <link rel="stylesheet" href="normalize.css"> -->
         
-        <!-- My CSS -->
-        <link rel="stylesheet" href="main.css">
+        {{! My CSS }}
+        <!-- <link rel="stylesheet" href="main.css"> -->
 
-        <!-- Fonts -->
+        {{! Fonts }}
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <!-- Need to add 'company' as keyword -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+        {{! Need to add 'company' as keyword }}
+
+        <link href="/style.css" rel="stylesheet">
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"
+             rel="stylesheet">
+             <link href="https://npmcdn.com/basscss-btn@1.1.1/css/btn.css"
+             rel="stylesheet">
+             <link href="https://npmcdn.com/basscss-btn-primary@1.1.0/css/btn-primary.css"
+             rel="stylesheet">
+             <link href="https://npmcdn.com/basscss-colors@2.2.0/css/colors.css"
+             rel="stylesheet">
+             <link href="https://npmcdn.com/basscss-background-colors@2.1.0/css/background-colors.css"
+             rel="stylesheet">
+             <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css"
+             rel="stylesheet"> -->
+
+        
     </head>
     
     <body>
-        <!-- Root -->
-        <div id="root">
-            
-            <!-- Navbar -->
-            <nav>
+
+        <div id="root" class="px3">
+
+            <nav class="max-width-4 mx-auto mb4">
                 {{>navbar}}
-            </nav><!-- End Navbar -->
+            </nav>
 
-            <!-- Main -->
-            <div id="main">
+            <main class="max-width-4 mx-auto mb4">
                 {{>page}}
-            </div><!-- End Main -->
+            </main>
 
-            <!-- Footer -->
-            <footer>
+            <footer class="max-width-4 mx-auto mb4">
                 {{>footer}}
-            </footer><!-- End Footer -->
+            </footer>
             
-        </div><!-- End Root -->
+        </div>
         
-        <script src="main.bundle.js"></script>
+        <script src="main.js"></script>
         
     </body>
 </html>
