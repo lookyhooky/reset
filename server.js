@@ -1,12 +1,19 @@
 const express = require('express')
+const logger = require('morgan')
+const http = require('http')
+const path = require('path')
+
 const app = express()
+
+app.set('views', path.resolve(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 const scheduler = require('./routers/scheduler')
 
-app.use(express.static('public'))
+app.use(logger('short'))
+
+app.use(express.static(path.resolve(__dirname, 'public')))
 
 app.use('/scheduler', scheduler)
 
-app.listen(3000, function () {
-  console.log('listening on port 3000')
-})
+http.createServer(app).listen(3000)

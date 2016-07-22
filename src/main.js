@@ -106,7 +106,7 @@ const view = curry((msgs$, model) => {
     h('div', {}, model.buffer),
     h('form', {}, [
       h('div.clearfix', {}, [
-        h('div.col.col-6.px1', {}, [
+        h('div.sm-col.sm-col-6.px1', {}, [
           h('label.label', {
             style: {textAlign: 'left'}
           }, 'First Name'),
@@ -120,7 +120,7 @@ const view = curry((msgs$, model) => {
             on: {input: pass}
           }, [])
         ]),
-        h('div.col.col-6.px1', {}, [
+        h('div.sm-col.sm-col-6.px1', {}, [
           h('label.label', {
             style: {textAlign: 'left'}
           }, 'Last Name'),

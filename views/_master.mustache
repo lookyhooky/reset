@@ -35,7 +35,7 @@
         <!-- <link rel="stylesheet" href="main.css"> -->
 
         {{! Fonts }}
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <Link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
         {{! Need to add 'company' as keyword }}
@@ -61,15 +61,23 @@
 
         <div id="root" class="px3">
 
-            <nav class="max-width-4 mx-auto mb4">
-                {{>navbar}}
-            </nav>
+            <header class="max-width-3 mx-auto">
 
-            <main class="max-width-4 mx-auto mb4">
+                {{#header}}
+                    {{>header}}
+                {{/header}}
+            
+                <nav class="center">
+                    {{>navbar}}
+                </nav>
+
+            </header>
+            
+            <main class="max-width-3 mx-auto mb4">
                 {{>page}}
             </main>
 
-            <footer class="max-width-4 mx-auto mb4">
+            <footer class="max-width-3 mx-auto mb4">
                 {{>footer}}
             </footer>
             
