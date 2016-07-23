@@ -1,0 +1,35 @@
+body {
+    color: var(--dark-grey);
+    font-family: var(--font-family);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: color(var(--link-color) b(+20%));
+    text-decoration: underline;
+}
+
+/* Utilities */
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Open Sans', sans-serif;
+    --link-color: #337ab7;
+    --dark-grey: rgb(50, 50, 50);
+}

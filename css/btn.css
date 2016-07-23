@@ -1,58 +1,146 @@
 /* btn.css */
 
-.btn,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box; }
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; }
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+/* .btn, */
+/* button, */
+/* input[type="submit"], */
+/* input[type="reset"], */
+/* input[type="button"] { */
+/*   display: inline-block; */
+/*   height: 38px; */
+/*   padding: 0 30px; */
+/*   color: #555; */
+/*   text-align: center; */
+/*   font-size: 11px; */
+/*   font-weight: 600; */
+/*   line-height: 38px; */
+/*   letter-spacing: .1rem; */
+/*   text-transform: uppercase; */
+/*   text-decoration: none; */
+/*   white-space: nowrap; */
+/*   background-color: transparent; */
+/*   border-radius: 4px; */
+/*   border: 1px solid #bbb; */
+/*   cursor: pointer; */
+/*   box-sizing: border-box; } */
+/* .button:hover, */
+/* button:hover, */
+/* input[type="submit"]:hover, */
+/* input[type="reset"]:hover, */
+/* input[type="button"]:hover, */
+/* .button:focus, */
+/* button:focus, */
+/* input[type="submit"]:focus, */
+/* input[type="reset"]:focus, */
+/* input[type="button"]:focus { */
+/*   color: #333; */
+/*   border-color: #888; */
+/*   outline: 0; } */
+/* .button.button-primary, */
+/* button.button-primary, */
+/* input[type="submit"].button-primary, */
+/* input[type="reset"].button-primary, */
+/* input[type="button"].button-primary { */
+/*   color: #FFF; */
+/*   background-color: #33C3F0; */
+/*   border-color: #33C3F0; } */
+/* .button.button-primary:hover, */
+/* button.button-primary:hover, */
+/* input[type="submit"].button-primary:hover, */
+/* input[type="reset"].button-primary:hover, */
+/* input[type="button"].button-primary:hover, */
+/* .button.button-primary:focus, */
+/* button.button-primary:focus, */
+/* input[type="submit"].button-primary:focus, */
+/* input[type="reset"].button-primary:focus, */
+/* input[type="button"].button-primary:focus { */
+/*   color: #FFF; */
+/*   background-color: #1EAEDB; */
+/*   border-color: #1EAEDB; } */
+
+.btn {
+    color: #fff;
+    /* color: inherit; */
+    font-family: var(--button-font-family);
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    letter-spacing: 0.2em;
+
+    /* font-weight: var(--button-font-weight); */
+    /* text-transform: uppercase; */
+    text-decoration: none;
+
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    padding: var(--button-padding-y) var(--button-padding-x);
+    margin: 0;
+    height: auto;
+
+    border: var(--border-width) solid transparent;
+
+    -webkit-appearance: none;
+
+
+    /* My additions to basscss-btn */
+    border-radius: 0.3em;
+
+    font-weight: 400;
+    /* From Bootstrap */
+
+    background-color: var(--btn-bg-color);
+
+    /* background-image: linear-gradient(to bottom, */
+    /*                                   var(--btn-bg-color) 0, */
+    /*                                   color(var(--btn-bg-color) b(+20%)) 100%); */
+    background-repeat: repeat-x;
+    border-color: var(--btn-border-color);
+
+    /* box-shadow: inset 0 3px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,0.1); */
+}
+
+.btn:link {
+    color: white;
+}
+
+.btn:visited {
+    color: white;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: color(var(--btn-bg-color) b(+10%));
+    /* background-image: linear-gradient(to bottom, */
+                                      /* color(var(--btn-bg-color) b(+10%)) 0, */
+                                      /* color(var(--btn-bg-color) b(+30%)) 100%); */
+    border-color: color(var(--btn-border-color) b(+10%));
+    }
+
+.btn:focus {
+    border-color: var(--darken-2);
+    box-shadow: 0 0 0 2px var(--darken-3);
+}
+
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+:root {
+    --btn-bg-color: rgb(51, 122, 183);
+    --btn-border-color: #245580;
+    --border-width: 1px;
+    --bold-font-weight: bold;
+    --button-font-family: inherit;
+    --button-font-size: inherit;
+    --button-font-weight: var(--bold-font-weight);
+    --button-line-height: 1.125rem;
+    --button-padding-y: 0.75rem;
+    --button-padding-x: 1rem;
+    --darken-2: rgba(0, 0, 0, .125);
+    --darken-3: rgba(0, 0, 0, .25);
+}

@@ -1,5 +1,7 @@
 @import 'normalize.css';
 
+@import 'base'; /* My base.css */
+
 /* @import 'basscss-btn'; */
 /* @import 'basscss-btn-primary'; */
 @import 'basscss-colors';
@@ -11,49 +13,113 @@
 @import 'table';
 @import 'spacing';
 
-body {
-    font-family: var(--font-family);
+
+nav a {
+    color: color(var(--dark-grey) w(+30%));
 }
 
-a {
+nav a:link {
+    color: color(var(--dark-grey) w(+30%));
+}
+
+nav a:visited {
+    color: color(var(--dark-grey) w(+30%));
+}
+
+nav a:hover {
+    color: black;
     text-decoration: none;
 }
 
-nav  {
+nav > ul  {
+    font-weigth: 700;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
 
 nav > ul {
+    margin-top: 0;
     margin-bottom: 0;           /* undo basscss list-reset `margin-bottom: 2.5em;`  */
 }
 
+
+.wrap {
+    color: white;
+    background-color: var(--dark-grey);
+    /* Standard linear-gradient syntax */
+    background: linear-gradient(color(var(--dark-grey) w(+10)), var(--dark-grey));
+}
+
+header {
+    font-size: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 header > h1 {
-    font-size: 2.5em;
     font-family: var(--header-font-family);
     font-weight: 700;
-    text-align: center;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    letter-spacing: 0.1em;
+    text-shadow: 0.075em 0.075em 0.02em color(var(--dark-grey) b(+5%));
+    text-transform: uppercase;
+}
+
+header > h1 > span {
+    display: block;
+    font-size: 0.5em;
+    letter-spacing: 0.1em;
+    /* text-shadow: 0.1em 0.1em 0 color(var(--dark-grey) b(+10%)); */
+}
+
+header > .btn {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    padding: 1em;
+    box-shadow: 0.2em 0.2em 0.2em color(var(--dark-grey) b(+10%));
+    text-transform: uppercase;
+}
+
+footer > p, .cranes {
+    font-size: 0.9rem;
+}
+
+.locations > li {
+    padding-bottom: var(--space-1);
+}
+.contact > tbody > tr > td {
+    border-bottom: 0;
 }
 
 @media (--breakpoint-sm) {
     header {
-        margin-top: 10em;
+        font-size: 3rem;
+        padding: 1.5em 0 1.5em 0;
     }
 
-    header > h1 {
-        font-size: 3.5em;
+    header > .btn {
+        font-size: 1rem;
+    }
+
+    footer > p, .cranes {
+        font-size: 1rem;
+    }
+
+    .text-primary {
+        font-size: var(--h2);
     }
 }
 
 @media (--breakpoint-md) {
-    header > h1 {
-        font-size: 4.5em;
+    header {
+        font-size: 4rem;
     }
 }
 
 :root {
-    --font-family: 'Open Sans', sans-serif;
     --header-font-family: 'Montserrat', sans-serif;
+    --red: rgb(203, 26, 26);
     --button-color: white;
     --button-background-color: rgb(4, 174, 89); /* Green */
 }
